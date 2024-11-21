@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing Brand</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-title">
+                <img src="C:\Users\Kent\Pictures\SA\ywlogo.jpg" alt="YungWynn Logo">
+                <h1>A&M Closet</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#" onclick="showSection('home')">Home</a></li>
+                        <li><a href="#" onclick="showSection('shop')">Shop</a></li>
+                        <li><a href="#" onclick="showSection('about')">About Us</a></li>
+                        <li><a href="#" onclick="showSection('contacts')">Contacts</a></li>
+                    </ul>
+                </nav>
+                <button id="loginButton" class="login-btn" onclick="toggleLoginForm()">Login</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="image-slider">
+            <img src="C:\Users\Kent\Pictures\SA\ywcover1.jpg" alt="Man 1">
+            <img src="C:\Users\Kent\Pictures\SA\ywcover2.jpg" alt="Hoodie 1">
+        </div>
+        <section id="home" style="display: none;">
+            <h2>Welcome to A&M Closet</h2>
+            <p>I'm sure you will definitely find your perfect fits in this store and also we can help you to choose what's the best for your style.</p>
+        </section>
+        <section id="shop" style="display: none;">
+            <h2>Shop</h2>
+            <div class="product-list">
+                <div class="product">
+                    <img src="C:\Users\Kent\Pictures\SA\carhartt.jpg" alt="Product 1">
+                    <h3>YW x Carhartt</h3>
+                    <p>Size: L / XL / 2XL</p>
+                    <p>Price: ₱2500.00</p>
+                    <button onclick="addToCart('Product 1', 2500)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="C:\Users\Kent\Pictures\SA\nikestu.jpg" alt="Product 2">
+                    <h3>YW x NIKE x STUSSY</h3>
+                    <p>Size: L / XL / 2XL</p>
+                    <p>Price: ₱1500.00</p>
+                    <button onclick="addToCart('Product 2', 1500)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="C:\Users\Kent\Pictures\SA\supreme.jpg" alt="Product 3">
+                    <h3>YW x SUP</h3>
+                    <p>Size: L / XL / 2XL</p>
+                    <p>Price: ₱3500.00</p>
+                    <button onclick="addToCart('Product 3', 3500)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="shopping-cart" style="display: none;">
+                <h3>Shopping Cart</h3>
+                <ul id="cart-items"></ul>
+                <p>Total: ₱<span id="total-amount">0.00</span></p>
+                <button onclick="checkout()">Checkout</button>
+            </div>
+        </section>
+        <section id="about" style="display: none;">
+            <h2>About Us</h2>
+            <p>Welcome to YungWynn, the place where comfort and style collide! We take great pride in designing stylish apparel that captures your own style. From spectacular pieces to daily necessities, we're committed to offering premium designs that boost your self-esteem. Come along on this fashionable adventure with YungWynn and find your trademark look.</p>
+        </section>
+        <section id="contacts" style="display: none;">
+            <h2>Contact</h2>
+            <p>Contact us at 0912345678 for any inquiries or assistance.</p>
+        </section>
+        <div id="loginForm" class="login-form" style="display: none;">
+            <form onsubmit="handleLogin(event)">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+                <p id="error-message" style="color: red; display: none;">Invalid username or password.</p>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; ERCE, MOSCATILES, TOLENTINO</p>
+        </div>
+    </footer>
+    <script src="ninongtry.js"></script>
+</body>
+</html>

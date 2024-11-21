@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A&M Closet - Home</title>
+    <link rel="stylesheet" href="styling.css">
+</head>
+<body>
+    
+    <header>
+        <div class="container">
+            <div class="logo-title">
+                <img src="ywlogo.jpg" alt="YungWynn Logo">
+                <h1>A&M Closet</h1>
+                <nav>
+                    <ul>
+                        <li><a href="8WEBPAGE.html" onclick="showSection('home')">Home</a></li>
+                        <li><a href="shop.html" onclick="showSection('shop')">Shop</a></li>
+                        <li><a href="aboutus.html" onclick="showSection('about')">About Us</a></li>
+                        <li><a href="contacts.html" onclick="showSection('contacts')">Contacts</a></li>
+                    </ul>
+                </nav>
+                <button id="logoutButton" class="logout-btn" onclick="handleLogout()">Log Out</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="home" style="display: block;">
+            <h2>Welcome to A&M Closet</h2>
+            
+            <p>I'm sure you will definitely find your perfect fits in this store and also we can help you to choose what's the best for your style.</p>
+        </section>
+        <style>
+            body {
+              background-image: url('backgroundimage.jpg');
+              background-repeat: no-repeat;
+              background-attachment:local;
+              background-size: cover;
+            }
+            </style>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; ERCE, MOSCATILES, TOLENTINO</p>
+        </div>
+    </footer>
+    <script src="success.js"></script>
+</body>
+</html>

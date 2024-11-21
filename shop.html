@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A&M Closet - Shop</title>
+    <link rel="stylesheet" href="styling.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-title">
+                <img src="ywlogo.jpg" alt="YungWynn Logo">
+                <h1>A&M Closet</h1>
+                <nav>
+                    <ul>
+                        <li><a href="8WEBPAGE.html" onclick="showSection('home')">Home</a></li>
+                        <li><a href="shop.html" onclick="showSection('shop')">Shop</a></li>
+                        <li><a href="aboutus.html" onclick="showSection('about')">About Us</a></li>
+                        <li><a href="contacts.html" onclick="showSection('contacts')">Contacts</a></li>
+                    </ul>
+                </nav>
+                <button id="logoutButton" class="logout-btn" onclick="handleLogout()">Log Out</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="shop">
+            <div class="container">
+                <div class="product">
+                    <img src="chfs.jpg" alt="Product 1">
+                    <h2>YW x Chrome Hearts Hollywood Trucker Hat</h2>
+                    <p class="size">Size: L / XL</p>
+                    <p class="price">Price: ₱2000.00</p>
+                    <button onclick="addToCart('YW x Chrome Hearts Hollywood Trucker Hat', 2500)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="stussyfs.jpg" alt="Product 2">
+                    <h2>YW x Supreme AOP</h2>
+                    <p class="size">Size: L / XL / XL</p>
+                    <p class="price">Price: ₱3000.00</p>
+                    <button onclick="addToCart('YW x Supreme AOP', 2500)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="carhartt.jpg" alt="Product 3">
+                    <h2>YW x Carhartt</h2>
+                    <p class="size">Size: L / XL / 2XL</p>
+                    <p class="price">Price: ₱2500.00</p>
+                    <button onclick="addToCart('YW x Carhartt', 2500)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="nikestu.jpg" alt="Product 4">
+                    <h2>YW x NIKE x STUSSY</h2>
+                    <p class="size">Size: L / XL / 2XL</p>
+                    <p class="price">Price: ₱1500.00</p>
+                    <button onclick="addToCart('YW x NIKE x STUSSY', 1500)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="supreme.jpg" alt="Product 5">
+                    <h2>YW x SUP</h2>
+                    <p class="size">Size: L / XL / 2XL</p>
+                    <p class="price">Price: ₱3500.00</p>
+                    <button onclick="addToCart('YW x SUP', 3500)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="evisufs.jpg" alt="Product 6">
+                    <h2>YW x Evise Multi-Pockets</h2>
+                    <p class="size">Size: L / XL / XL</p>
+                    <p class="price">Price: ₱3000.00</p>
+                    <button onclick="addToCart('YW x Evise Multi-Pockets', 2500)">Add to Cart</button>
+                </div>
+                <div class="shopping-cart">
+                    <h3>Shopping Cart</h3>
+                    <ul id="cart-items"></ul>
+                    <p>Total: ₱<span id="total-amount">0.00</span></p>
+                    <button onclick="checkout()">Checkout</button>
+                </div>
+            </div>
+        </section>
+        <section id="payment-form" style="display: none;">
+            <div class="container">
+                <h2>Payment Information</h2>
+                <form onsubmit="handlePayment(event)">
+                    <label for="card-name">Name on Card:</label>
+                    <input type="text" id="card-name" name="cardName" required>
+                    <label for="card-number">Card Number:</label>
+                    <input type="text" id="card-number" name="cardNumber" required>
+                    <label for="expiry-date">Expiry Date:</label>
+                    <input type="text" id="expiry-date" name="expiryDate" required>
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" name="cvv" required>
+                    <button type="submit">Pay Now</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="shop">
+            <p>&copy; ERCE, MOSCATILES, TOLENTINO</p>
+        </div>
+    </footer>
+    <script src="success.js"></script>
+</body>
+</html>
